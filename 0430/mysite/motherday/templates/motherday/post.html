@@ -1,0 +1,33 @@
+<div style="font-family:Microsoft JhengHei;padding:10px;"  align="left" margin"auto" >
+
+
+<h1>母親節留言板</h1>
+<body bgcolor="#F8C3CD">
+<form action="" method="POST">
+
+    <label for="name">您的名字</label>
+    <input id="name" type="text" name="name"><br>
+    <label for="title">標題</label>
+    <input id="title" type="text" name="title"><br>
+    <label for="contnet">內容</label>
+    <textarea id="content" rows="3" cols="30" name="content"></textarea>
+    <input type="submit" value="留言">
+</form><hr>
+<table width="500" height="80" border="1">
+	<tr>
+		<td align="center" valign="center">標題</p>
+		<td align="center" valign="center">留言人</p>
+		<td align="center" valign="center">內容</p>
+
+	</tr>
+	{% for p in names %}
+	<tr>
+		<td valign="center">{{ p.title }}</p>
+		<td align="center" valign="center">{{ p.name }}</p>
+		<td valign="center">{{ p.content }}</p>
+
+	</tr>
+	{% endfor %}
+</table>
+</body>
+</div>
